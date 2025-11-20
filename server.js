@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.routes.js';
+import searchRoutes from './routes/search.route.js';
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(morgan('dev'));
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/search', searchRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

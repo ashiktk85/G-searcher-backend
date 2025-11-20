@@ -4,10 +4,10 @@ import { AuthService } from './auth.service.js';
 // Default credentials: admin@admin.com / admin123
 // In production, change these credentials or use environment variables
 const initializeAdmin = async () => {
-  const hashedPassword = await AuthService.hashPassword('admin123');
+  const hashedPassword = await AuthService.hashPassword('123');
   return {
     id: 1,
-    email: 'admin@admin.com',
+    email: 'admin',
     password: hashedPassword,
     name: 'Admin'
   };
